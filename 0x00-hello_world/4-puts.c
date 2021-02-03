@@ -1,5 +1,9 @@
-/*
+#include <stdio.h>
+/**
  * main - My function
+ *
+ * Description: prints text
+ * Return: with zero
  */
 int main(void)
 {
