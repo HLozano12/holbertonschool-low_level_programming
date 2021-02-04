@@ -1,4 +1,4 @@
-#include <stdio.h>
+B#include <stdio.h>
 /**
  * main - The Function
  *
@@ -6,7 +6,7 @@
  *
  * Return: zero
  */
-int main (void)
+int main(void)
 {
 	printf("with proper grammar, but the outcome is a piece of art,\n");
 
