@@ -1,5 +1,7 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
+#include <stdio.h>
+#include <stdlib.h>
 
 void print_number(int n);
 void print_triangle(int size);
