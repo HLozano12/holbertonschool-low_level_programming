@@ -22,7 +22,7 @@ void print_triangle(int size)
 
 /* Create the row with also using size as triangle size */
 		for (; row <= size; row++)
-       			_putchar(35);
+       			_putchar('#');
 
 		_putchar('\n');
 	}
