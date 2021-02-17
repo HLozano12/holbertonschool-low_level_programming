@@ -15,7 +15,7 @@ void rev_string(char *s)
 /* reference to task 2 runction which gives length of string */
 	len = _strlen(s);
 /* removes null byte, change the end to the beginning */
-	for (beg = 0, end = len -1; beg < end; beg++, end--)
+	for (beg = 0, end = len - 1; beg < end; beg++, end--)
 	{
 		c = s[beg];
 		s[beg] = s[end];
