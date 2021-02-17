@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
  * _strlen - Prototype function
- * @*s: our pointer
+ * @s: our pointer
  * Description: Return length of string
  * Return: an int
  */
