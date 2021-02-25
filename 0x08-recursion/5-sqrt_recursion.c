@@ -23,7 +23,7 @@ int _find_sqrt(int h, int l)
 		return (l);
 
 	if (l * l > h)
-		return (- 1);
+		return (-1);
 
 	else
 		return (_find_sqrt(h, l + 1));
