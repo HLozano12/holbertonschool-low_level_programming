@@ -25,6 +25,5 @@ int _find_sqrt(int h, int l)
 	if (l * l > h)
 		return (-1);
 
-	else
-		return (_find_sqrt(h, l + 1));
+	return (_find_sqrt(h, l + 1));
 }
