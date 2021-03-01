@@ -23,22 +23,37 @@ int main(int argc, char **argv)
 	{
 
 /* if a number has symb that are not digits print error\n and 1 */
-		if ((*argv[h] < '0' ||
-*argv[h] > '9') && *argv[h] != '-')
+		if (rubberduck(argv[h]))
+			l += atoi(argv[h]);
+
+		else
 		{
 			printf("Error\n");
 			return (1);
 		}
 
 
-/* If anything else, provide the sum of positive numbers and return 0 */
-		else
-		{
-			l += atoi(argv[h]);
-		}
 
 	}
 
 	printf("%d\n", l);
 	return (0);
+}
+
+/**
+ * rubberduck - Helper Function
+ * Description: Is tring only numers
+ * @a: pointer
+ * Return: 1 if digits only, 0 if not
+ */
+int rubberduck(char *a)
+{
+	while (*a)
+	{
+		if (!((*a >= '0') && (*a <= '9')))
+			return (0);
+		a++;
+	}
+
+	return (1);
 }
