@@ -8,8 +8,8 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	unsigned int len1 = 0, len2 = 0;
-	unsigned int h, l;
+	int a = 0;
+	int h, l;
 	char *ptr;
 
 /* if NULL is passed, treat it as an empty string */
@@ -20,30 +20,46 @@ char *str_concat(char *s1, char *s2)
 		s1 = "";
 
 
-/* while the array is not set to NullByte, move through */
-	while (s1[len1] != '\0')
-		len1++;
-
-	while (s2[len2] != '\0')
-		len2++;
-
-/* create memory space to concat and take consideration of the nullbyte */
-	ptr = (char *)malloc((len1 + len2) * sizeof(char) + 2);
+/* create memory space to concat and use helper function */
+	ptr = (char *)malloc(_strlen(s1) + _strlen(s2) * sizeof(char) + 1);
 
 /* function should return NULL on failure */
-	if (ptr == 0)
-	{
-		free(ptr);
+	if (ptr == NULL)
 		return (NULL);
-	}
 
 /* should point to a new spacememory w/contents of s1 & s2 */
 	for (h = 0; s1[h] != '\0'; h++)
-		ptr[h] = s1[h];
+	{
+		ptr[a] = s1[h];
+		a++;
+	}
 
 	for (l = 0; s2[l] != '\0'; l++)
-		ptr[l + len1] = s2[l];
+	{
+		ptr[a] = s2[l];
+		a++;
+	}
+
+	ptr[a] = '\0';
 
 	return (ptr);
 
+}
+
+
+/**
+ * _strlen - Prototype function
+ * @s: our pointer
+ * Description: Return length of string
+ * Return: an int
+ */
+int _strlen(char *s)
+{
+	int len = 0;
+
+	while (*(s + len) != '\0')
+	{
+		len++;
+	}
+	return (len);
 }
