@@ -11,7 +11,7 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *a;
-	unsigned int h, l;
+	unsigned int h, l, i;
 
 /* if NULL is passed, treat it as an empty string */
 	if (s1 == NULL)
@@ -26,10 +26,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 /* greater or equal to the length of s2 then use the entire string s2 */
 	for (l = 0; s2[l]; l++)
-	{
-		if (n >= l)
-			n = l;
-	}
+		;
+
+	if (n >= l)
+		n = l;
 
 	a = malloc(sizeof(char) * h + n + 1);
 
@@ -38,9 +38,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 
 /* point to new space in memory and null terminated */
-	a[l] = s2[l];
+	for (i = 0; i < h; i++)
+		a[i] = s1[i];
 
-	a[l] = '\0';
+	for (; i < h + n; i++)
+		a[i] = s2[i - h];
+
+	a[i] = '\0';
 	return (a);
 
 }
