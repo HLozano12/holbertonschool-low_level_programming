@@ -1,5 +1,9 @@
 #include <stdio.h>
-
+/**
+ * main - main function
+ * Description: Print all possible combo of  single digits
+ * Return: 0
+ */
 int main(void)
 {
 	int h;
@@ -17,5 +21,5 @@ int main(void)
 
 	putchar('\n');
 
-	return 0;
+	return (0);
 }
