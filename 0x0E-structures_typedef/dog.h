@@ -3,13 +3,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
- /**
-  * struct dog - struct info
-  * Description: Header stuct
-  * @name: name of dog
-  * @age: age of dog
-  * @owner: Owner of dog
-  */
+/**
+ * struct dog - struct info
+ * Description: Header stuct
+ * @name: name of dog
+ * @age: age of dog
+ * @owner: Owner of dog
+ */
 struct dog
 {
 	char *name;
