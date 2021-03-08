@@ -1,6 +1,6 @@
 #include "dog.h"
 /**
- * int_dog - Prototype function
+ * init_dog - Prototype function
  * Decription: Initialize a varible of type struct dog
  * @d: Struct
  * @name: name of dog
