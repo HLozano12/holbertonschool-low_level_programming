@@ -1,4 +1,4 @@
-B#include "holberton.h"
+#include "holberton.h"
 /**
  * main - main file
  * Description: copies content of a file to another
@@ -8,7 +8,7 @@ B#include "holberton.h"
  */
 int main(int argc, char **argv)
 {
-	int read, to, from;
+	int rd, to, from;
 	char buf[1024];
 
 	if (argc != 3)
@@ -25,13 +25,13 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		close(from), exit(99);
 	}
-	while ((read = read(from, buf, 1024)) > 0)
-		if (write(to, buf, read) == -1)
+	while ((rd = read(from, buf, 1024)) > 0)
+		if (write(to, buf, rd) == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			close(from), close(to), exit(99);
 		}
-	if (read == -1)
+	if (rd == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from %s\n", argv[1]);
 		exit(98);
