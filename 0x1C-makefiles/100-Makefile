@@ -12,11 +12,11 @@ all: ${OBJ} m.h
 
 
 clean:
-	${RM}-f *.swp *~ ${NAME}
+	${RM} -f *.swp *~ ${NAME}
 
 
 oclean:
-	${RM}-f ${OBJ}
+	${RM} -f ${OBJ}
 
 
 fclean: clean oclean
