@@ -1,11 +1,9 @@
 #include "hash_tables.h"
 /**
- * write function that gives you the index of a key
- * key is key
- * size is the size of the array of the hash table
- * Use the hash_djb2 func
- * retrn indx which the key/value should be stored in array
- * have to use hash func of all the next tables
+ * key_index - The function
+ * @key: Key is key
+ * @size: size of the array of the hashtable
+ * Return: return inx of key/value
  */
 
 unsigned long int key_index(const unsigned char *key, unsigned long int size)
