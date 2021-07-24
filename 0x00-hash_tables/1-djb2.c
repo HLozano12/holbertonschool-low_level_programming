@@ -1,12 +1,6 @@
 #include "hash_tables.h"
 
 /**
- * write a hash func implementing the djb2 algorithm
- * function is from task given
- * using hash_djb2.c from papamuziko GitHub
- */
-
-/**
  * hash_djb2 - implementation of the djb2 algorithm
  * @str: string used to generate hash value
  *
