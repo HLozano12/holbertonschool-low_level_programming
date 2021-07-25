@@ -1,4 +1,4 @@
-General
+General Layout
 
 What is a hash function
 
