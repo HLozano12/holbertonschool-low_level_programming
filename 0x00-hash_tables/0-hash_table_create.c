@@ -1,7 +1,7 @@
 #include "hash_tables.h"
 
 /**
- * *hash_table_create - prototype func
+ * hash_table_create - prototype func
  * @size: is size of the array
  * Return: pointer to the new hash table
  */
