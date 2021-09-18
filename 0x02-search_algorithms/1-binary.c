@@ -5,10 +5,10 @@
  * @array: a pointer to the first element of the array to search
  * @size: the number of elements in array
  * @value: value to search for
- * 
+ *
  * Return: index where value is, or -1
  */
- 
+
 
 int binary_search(int *array, size_t size, int value)
 {
@@ -16,7 +16,7 @@ int binary_search(int *array, size_t size, int value)
 	int	high = size - 1;
 	int mid = (high + low) / 2;
 	int a = 0;
-	
+
 	/* if array is NULL return -1 */
 	if (array == NULL)
 		return (-1);
