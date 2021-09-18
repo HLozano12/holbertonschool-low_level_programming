@@ -12,5 +12,16 @@
 
 int binary_search(int *array, size_t size, int value)
 {
-
+	if (!array)
+		return (-1);
+	if (size >= 1)
+	{
+		int x = 1 + (size -1) / 2;
+	if (array[x] == value)
+		return (x);
+	if (array[x] > value)
+		return (binary_search(array, x - 1, value, size));
+	return (binary_search(array, x + 1, value, size));
+	}
+	return (-1);
 }
