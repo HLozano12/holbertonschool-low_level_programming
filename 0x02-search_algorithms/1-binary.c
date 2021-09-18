@@ -39,7 +39,7 @@ int binary_search(int *array, size_t size, int value)
 		if (value > array[mid])
 			low = mid + 1;
 		else if (value < array[mid])
-			high = mid -1;
+			high = mid - 1;
 		else
 			return (mid);
 	}
